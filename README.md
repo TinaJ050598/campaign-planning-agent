@@ -4,6 +4,8 @@ This is our project for the *Big Data & AI in Marketing* course (Option 2: Spec-
 
 The idea: a marketer enters a brand, product, audience, goal, and budget, and the agent works out which channels to use, how to split the budget, what KPI targets are realistic, and writes it all up as a short brief. The kind of planning that normally takes a couple of hours, done in under two minutes.
 
+This repository also includes our project presentation (`Presentation_Marketing_AI.pptx`, open in PowerPoint) and a short demo video of the agent running, further down in this README.
+
 ## What it does
 
 The agent runs six steps in a fixed order, and each step makes one decision and explains it:
