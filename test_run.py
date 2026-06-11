@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-One-shot test run: a B2C project management SaaS launching in the UK.
+One-shot test run: GlowDrop, a B2C skincare brand running a conversion campaign.
 Calls agent.run() directly — no interactive prompts.
 """
 import os, sys
@@ -15,23 +15,23 @@ from models.inputs import CampaignInputs
 
 inputs = CampaignInputs(
     marketing_goal=(
-        "Drive free-trial signups for a new project management tool. "
-        "The brand is not yet known in the UK market."
+        "Increase first-time purchases of GlowDrop's Morning Boost Serum. "
+        "The audience already knows the brand through its TikTok presence."
     ),
     brand_description=(
-        "Flowdesk is a B2C project management SaaS launched in 2024. "
-        "It targets freelancers and small creative teams. "
-        "The product is new with no existing UK customer base."
+        "GlowDrop is a B2C skincare brand. Its product is the Morning Boost "
+        "Serum, a Vitamin C face serum priced at 45 GBP. The USP is clean "
+        "ingredients, dermatologist-tested, affordable luxury."
     ),
     target_audience=(
-        "UK-based freelancers and small creative teams (2–10 people), "
-        "aged 25–40, who currently use spreadsheets or Notion and are "
-        "looking for a simpler task and project tracking tool."
+        "Women aged 22–38 in the UK and US who are interested in skincare "
+        "and wellness. The brand has an existing organic TikTok following of "
+        "42k, but reach is declining."
     ),
-    total_budget=3000.00,
-    product_price=19.00,          # monthly subscription price
+    total_budget=5000.00,         # per month
+    product_price=45.00,          # price of the serum
     target_market_language="English",
-    existing_channels=[],         # brand new — no prior channels
+    existing_channels=["Organic TikTok"],  # 42k followers, reach declining
     product_type="B2C",
 )
 
@@ -43,7 +43,7 @@ def section(n, title):
 
 print(f"\n{HRH}")
 print("  CAMPAIGN PLANNING AGENT — TEST RUN")
-print(f"  Scenario: Flowdesk | B2C SaaS | UK | 3,000 budget")
+print(f"  Scenario: GlowDrop | B2C skincare | UK & US | 5,000 budget")
 print(HRH)
 print("\nRunning pipeline…")
 
