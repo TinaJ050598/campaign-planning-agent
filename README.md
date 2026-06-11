@@ -127,3 +127,10 @@ The three specification documents (`CLAUDE.md`, `REQUIREMENTS.md`, `DESIGN.md`) 
 - The `.env` file is **not** in this repository on purpose, so our API key never gets committed. You'll need to add your own key as described above.
 - KPI targets come from the inputs (product price and budget), not from generic industry averages. ROAS is always calculated in Python as product price divided by CPA target, so the numbers stay consistent with each other.
 - The agent looks at each channel on its own and has no access to live market data, so the recommendations are based on general channel logic rather than current conditions. We go into these limitations in more detail in the report.
+## Demo
+
+
+
+
+https://github.com/user-attachments/assets/5c519363-6d70-4e0f-802d-74fce33dac4c
+
