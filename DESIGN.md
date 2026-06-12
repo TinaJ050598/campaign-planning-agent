@@ -18,14 +18,16 @@ campaign-agent/
 │   └── write_brief.py       # Step 6 — campaign brief synthesis
 ├── models/
 │   ├── __init__.py
-│   ├── inputs.py            # CampaignInputs dataclass — all 8 input fields
+│   ├── inputs.py            # CampaignInputs dataclass — all 9 input fields
 │   └── outputs.py           # Output dataclasses for each step (FunnelStage, Channel, etc.)
 ├── validators/
 │   ├── __init__.py
 │   └── input_validator.py   # Checks required fields, detects missing/ambiguous inputs
+├── deliverables-docs/       # Project deliverables: report, presentation, demo recording
 ├── CLAUDE.md
 ├── REQUIREMENTS.md
 ├── DESIGN.md
+├── README.md
 └── requirements.txt         # Python dependencies (anthropic SDK, etc.)
 ```
 
@@ -152,7 +154,7 @@ campaign-agent/
 ## 3. Data Flow Between Steps
 
 ```
-CampaignInputs (all 8 fields)
+CampaignInputs (all 9 fields)
         │
         ▼
 [ input_validator.py ]
@@ -219,7 +221,7 @@ Steps 4 and 5 both depend on Step 1 but are otherwise independent of each other 
 
 ### Phase 1 — Data Models
 
-1. Define `CampaignInputs` dataclass with all 8 input fields and their types.
+1. Define `CampaignInputs` dataclass with all 9 input fields and their types.
 2. Define output dataclasses: `GoalAnalysis`, `Channel`, `ChannelSelection`, `ChannelBudget`, `BudgetAllocation`, `ChannelKPIs`, `KPITargets`, `KeywordList`, `CampaignBrief`.
 3. Define enums: `FunnelStage` (Awareness / Consideration / Conversion), `PricingModel` (CPC / CPM / CPA).
 
