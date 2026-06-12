@@ -55,7 +55,7 @@ _KPI_TOOL = {
                             "type": "number",
                             "minimum": 0.01,
                             "description": (
-                                "Target cost per acquisition in GBP. "
+                                "Target cost per acquisition in the same currency as product_price. "
                                 "Must be derived as a fraction of product_price, "
                                 "adjusted for funnel stage and channel efficiency. "
                                 "Must be less than product_price."
