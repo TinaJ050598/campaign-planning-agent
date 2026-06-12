@@ -11,6 +11,7 @@
 | `target_audience` | String | Yes | Description of the intended audience (demographics, job titles, interests, geography) |
 | `total_budget` | Number (currency as provided by user) | Yes | Total available spend for the campaign |
 | `product_price` | Number (currency) | Yes | Price of the product or service being marketed; used to calculate CPA and ROAS |
+| `currency` | String | No | Currency for budget and price values (e.g. GBP, EUR, USD); defaults to GBP if not provided |
 | `target_market_language` | String | Yes | Language of the target market (used in Step 5 for keyword generation) |
 | `existing_channels` | List of Strings | No | Channels the brand currently uses; if absent, agent starts from scratch |
 | `product_type` | String (B2B or B2C) | No | Informs channel preference rules (e.g. B2B → prefer LinkedIn) |
