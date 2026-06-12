@@ -141,7 +141,7 @@ def write_brief(
         max_tokens=512,
         system=_SYSTEM_PROMPT,
         tools=[_BRIEF_TOOL],
-        tool_choice={"type": "any"},
+        tool_choice={"type": "tool", "name": "write_campaign_brief"},
         messages=[{"role": "user", "content": context}],
     )
 
@@ -152,7 +152,14 @@ def write_brief(
     if tool_use_block is None:
         raise RuntimeError("Model did not call the write_campaign_brief tool.")
 
-    brief_text: str = tool_use_block.input["campaign_brief"].strip()
+    raw_input = tool_use_block.input
+    if "campaign_brief" not in raw_input:
+        raise RuntimeError(
+            f"write_campaign_brief tool returned unexpected keys: {list(raw_input.keys())}. "
+            f"Full input: {raw_input}"
+        )
+
+    brief_text: str = raw_input["campaign_brief"].strip()
 
     sentence_count = _count_sentences(brief_text)
     if not (sentence_count >= _MIN_SENTENCES):
